@@ -84,6 +84,5 @@ This project applies machine learning techniques to predict whether a customer w
 
 ## ✍️ Autor / Author
 
-- Nombre / Name: [Tu Nombre]
-- Contacto / Contact: [Tu email o GitHub]
+- Nombre / Name: Andrés C
 
