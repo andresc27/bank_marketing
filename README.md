@@ -74,9 +74,9 @@ This project applies machine learning techniques to predict whether a customer w
 ## 🚀 Cómo ejecutar / How to Run
 
 1. Clona este repositorio:  
-   `git clone https://github.com/tu_usuario/bank-term-deposit-prediction.git`
+   `git clone https://github.com/andresc27/bank_marketing.git`
 3. Ejecuta el notebook en Jupyter:  
-   `jupyter notebook bank_term_prediction.ipynb`
+   `jupyter notebook bank_marketing.ipynb`
 
 ---
 
