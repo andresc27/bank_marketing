@@ -75,8 +75,6 @@ This project applies machine learning techniques to predict whether a customer w
 
 1. Clona este repositorio:  
    `git clone https://github.com/tu_usuario/bank-term-deposit-prediction.git`
-2. Instala los requerimientos:  
-   `pip install -r requirements.txt`
 3. Ejecuta el notebook en Jupyter:  
    `jupyter notebook bank_term_prediction.ipynb`
 
