@@ -20,13 +20,13 @@ This project applies machine learning techniques to predict whether a customer w
 **Español:**
 - Analizar y preparar los datos.
 - Identificar las variables más relevantes usando correlación e información mutua.
-- Entrenar y evaluar modelos de regresión logística.
+- Entrenar y evaluar modelos de regresión logística y Neural Networks (NN).
 - Comparar desempeño con y sin selección de variables.
 
 **English:**
 - Analyze and preprocess the data.
 - Identify the most relevant features using correlation and mutual information.
-- Train and evaluate logistic regression models.
+- Train and evaluate logistic regression and Neural Networks (NN) models.
 - Compare performance with and without feature selection.
 
 ---
@@ -36,6 +36,7 @@ This project applies machine learning techniques to predict whether a customer w
 - Python 3
 - Pandas, NumPy
 - Scikit-learn
+- TensorFlow / Keras
 - Matplotlib, Seaborn
 
 ---
@@ -44,39 +45,61 @@ This project applies machine learning techniques to predict whether a customer w
 
 - División de datos en conjuntos de entrenamiento, validación y prueba.
 - Escalado de características usando `StandardScaler`.
-- Métrica principal: Accuracy
-- Evaluación comparativa de dos modelos:
-  - Modelo con todas las variables.
-  - Modelo con variables seleccionadas por información mutua.
+- Manejo de desbalance de clases con `class_weight`.
+- Ajuste de umbral de decisión para priorizar la detección de clientes potenciales.
+- Comparación de modelos:
+  - **Logistic Regression** con selección de hiperparámetros (`C`) y balance de clases.
+  - **Neural Network** con regularización, normalización por lotes y `Dropout`.
 
 ---
 
 ## 📊 Resultados / Results
 
-- Ambos modelos lograron una precisión cercana al 91%.
-- La selección de características permitió reducir la complejidad sin pérdida significativa de desempeño.
-- El segundo modelo ofrece mayor interpretabilidad y puede ser útil en entornos donde la simplicidad del modelo es clave.
+**Logistic Regression:**
+
+- Accuracy: 0.79
+- Positive class (suscriptores):
+  - Precision: 0.35
+  - Recall: 0.95
+  - F1-score: 0.51
+- Negative class (no suscriptores):
+  - Precision: 0.99
+  - Recall: 0.77
+- AUC ≈ 0.935
+
+**Neural Network:**
+
+- Accuracy: 0.84
+- Positive class (suscriptores):
+  - Precision: 0.41
+  - Recall: 0.92
+  - F1-score: 0.57
+- Negative class (no suscriptores):
+  - Precision: 0.99
+  - Recall: 0.83
+- AUC ≈ 0.901
+
+**Observaciones:**
+
+- La Neural Network mejora la **exactitud global**, la **precisión** y el **F1-score** de la clase positiva, mientras mantiene un **recall alto** para detectar clientes interesados.
+- Logistic Regression mantiene ligeramente un AUC más alto, mostrando buena discriminación, pero con menor balance entre precisión y recall para los suscriptores.
+- Ajustar el umbral de decisión permite reducir falsos negativos, maximizando la captación de clientes potenciales.
 
 ---
 
 ## 📌 Conclusiones / Conclusions
 
 **Español:**
-- Es posible construir modelos precisos con un subconjunto reducido de variables.
-- La información mutua es útil para la selección de características en problemas de clasificación binaria.
+
+- Es posible mejorar la detección de clientes potenciales usando Neural Networks, ajustando el umbral y manejando el desbalance de clases.
+- La NN ofrece un mejor equilibrio entre precisión y recall para la clase positiva y mantiene alta exactitud para la clase negativa (reducimos falsos negativos y falsos positivos).
+- Logistic Regression sigue siendo una opción interpretable y eficiente con desempeño sólido.
 
 **English:**
-- Accurate models can be built using a reduced subset of features.
-- Mutual information is useful for feature selection in binary classification tasks.
 
----
-
-## 🚀 Cómo ejecutar / How to Run
-
-1. Clona este repositorio:  
-   `git clone https://github.com/andresc27/bank_marketing.git`
-3. Ejecuta el notebook en Jupyter:  
-   `jupyter notebook bank_marketing.ipynb`
+- Potential customer detection can be improved using Neural Networks by adjusting the threshold and handling class imbalance.
+- The NN provides a better balance between precision and recall for the positive class while maintaining high accuracy for the negative class.
+- Logistic Regression remains an interpretable and efficient option with solid performance.
 
 ---
 
