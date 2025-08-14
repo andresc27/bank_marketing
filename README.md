@@ -81,8 +81,8 @@ This project applies machine learning techniques to predict whether a customer w
 
 **Observaciones:**
 
-- La Neural Network mejora la **exactitud global**, la **precisión** y el **F1-score** de la clase positiva, mientras mantiene un **recall alto** para detectar clientes interesados.
-- Logistic Regression mantiene ligeramente un AUC más alto, mostrando buena discriminación, pero con menor balance entre precisión y recall para los suscriptores.
+- La Neural Network mejora la **exactitud global**, la **precisión** y el **F1-score** de la clase positiva (clientes que se suscriben), mientras mantiene un **recall alto** para detectar clientes interesados.
+- Logistic Regression mantiene ligeramente un AUC más alto, mostrando buena discriminación, pero con menor balance entre precisión y recall para detectar verdaderos suscriptores.
 - Ajustar el umbral de decisión permite reducir falsos negativos, maximizando la captación de clientes potenciales.
 
 ---
