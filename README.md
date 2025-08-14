@@ -3,8 +3,9 @@
 Este proyecto utiliza técnicas de aprendizaje automático para predecir si un cliente aceptará un depósito a plazo, utilizando el dataset de marketing bancario disponible en el repositorio de UCI Machine Learning.
 
 This project applies machine learning techniques to predict whether a customer will subscribe to a term deposit, using the Bank Marketing dataset from the UCI Machine Learning Repository.
-----
-Visualización preliminar en Power BI
+
+---
+# Visualización preliminar en Power BI
 ![Dashboard](images/dashboard_powerbi.JPG)
 ---
 
